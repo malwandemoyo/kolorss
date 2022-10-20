@@ -1,0 +1,232 @@
+body{
+    margin: 0;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    padding: 0 2em;
+    justify-content: foe
+}
+
+
+.grandparent{
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    margin: 2em
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 2em;
+    font-weight: 25;
+}
+
+p{
+    font-size: 1.25em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+footer{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: .75em;
+
+}
+
+
+#mhofu{
+    position: sticky;
+    bottom: 0;
+}
+
+.text-black{
+    color: black;
+}
+
+a{
+    color: orangered;
+}
+
+.parent #generator{
+    outline: none;
+    border: none;
+    padding: 0.7em 2em;
+    position: absolute;
+    bottom: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1em;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.parent #generator:hover{
+    background-color:#fff;
+    color: #1f1f1f;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 12);
+}
+
+.parent{
+    position: relative;
+    background: #ffffff;
+    width: 45em;
+    height: 25em;
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    color: #1f1f1f;
+    padding-bottom: 5em;
+    box-sizing: border-box;  
+}
+
+#child1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: hidden;
+    height: 100%;
+    border-radius: 15px; 
+}
+
+#child1 > div {
+    width: 25%;
+}
+
+
+.color{
+    background: #ccc;
+    height: 17em;
+    /* position: relative; */
+}
+
+#child1 h4{
+    font-size: 0.9em;
+}
+
+.fade-in{
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@media screen and (max-width: 500px){
+
+    #colors > div{
+        width: 70%;
+    }
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+.color{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lock-toggle{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0.5;
+} 
+.lock-toggle.is-locked {
+    opacity: 1;
+}
+
+.modifiers{
+    display: flex;
+    position: absolute;
+    bottom:  1em;
+    left: 80%;
+    transform: translateX(-0%);
+}
+
+.modifiers button{
+    cursor: pointer;
+    background: #1f1f1f;
+    color: #fff;
+    border-radius: 1.2em;
+    padding: 0.25em 1.5em;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.modifiers button:hover{
+    background-color:#fff;
+    color: #1f1f1f;
+}
+
+#unlocker{
+    position: absolute;
+    bottom: 1em;
+    right: 88.5%;
+    cursor: pointer;
+    background: #1f1f1f;
+    color: #fff;
+    border-radius: 1.5em;
+    padding: 0.05em 1.5em;
+}
+
+#unlocker img{
+    width: 25px;
+    height: 30px;
+    opacity: 0.75;
+}
+
+
+@media screen and (min-width: 300px) and (max-width:800px){
+
+    .parent #generator{
+        padding: 0.7em 1em;
+        font-size: 1em;
+    }
+
+    .parent{
+        width: 20em;
+        height: 20em;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #child1{
+        flex-direction: row;
+        overflow-x: hidden;        
+        align-items: center;
+
+    }
+
+    #child1 h4{
+        font-size: 0.9em;
+    }
+
+    .color{
+        height: 16em;
+        /* width: 5em; */
+
+    }
+
+    
+
+
+
+}
+
